@@ -9,8 +9,8 @@ function init() {
   map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/mapbox/dark-v10',
-    center: [-73.90, 40.82], // starting position [lng, lat]
-    zoom: 9.5 // starting zoom
+    center: [-94.80, 40.82], // starting position [lng, lat]
+    zoom: 4.2 // starting zoom
   });
   
   //bronx
@@ -46,6 +46,13 @@ function init() {
   setAuroraPopup();
   setKaresiaPopup();
   setUrvashiePopup();
+
+   //ABQ
+   setGabrielPopup();
+   setNataliaPopup();
+   setPaulPopup();
+   setRavenPopup();
+   setSarahPopup();
 }
 
 function setArthurPopup() {
@@ -1233,6 +1240,252 @@ function setUrvashiePopup() {
   
   let marker = new mapboxgl.Marker()
     .setLngLat([-73.8298597882683, 40.76428639606878])
+    .setPopup(popup) //sets a popup on this marker
+    .addTo(map);
+   marker._element.addEventListener('click', () => {
+    let visitedMarkerColor = '#bbbbbb';
+    let markerElement = marker.getElement();
+    let markerEls =  markerElement
+        .querySelectorAll(`g[fill="${marker._color}"]`);
+    markerEls[0].setAttribute("fill", visitedMarkerColor)
+  });
+}
+
+//ABQ
+function setGabrielPopup() {
+  let maxWidth = innerWidth /4;
+  
+ 
+  let popup = new mapboxgl.Popup({
+    offset: 10,
+    maxWidth: (innerWidth /2 + 25) + 'px',
+    anchor: 'center'
+  })
+  
+  //name
+  let dom = document.createElement('div');
+  let name = document.createElement('h2');
+  name.innerHTML = 'GABRIEL CARRION-GONZALES'
+  dom.appendChild(name);
+  
+  //address
+  let address = document.createElement('p');
+  address.innerHTML ='El Bosque'
+  dom.appendChild(address);
+  
+  // image
+  let image = document.createElement('img');
+  image.src = 'Gabriel_map.jpg';
+  image.width = innerWidth /2;
+  dom.appendChild(image);
+  
+  // audio
+  let sound      = document.createElement('audio');
+  sound.controls = 'controls';
+  sound.src      = 'Gabriel_map.m4a';
+  sound.type     = 'audio/mpeg';
+  dom.appendChild(sound);
+  
+  popup.setDOMContent(dom);
+  
+  let marker = new mapboxgl.Marker()
+    .setLngLat([-106.65557289462971, 35.068398436339514])
+    .setPopup(popup) //sets a popup on this marker
+    .addTo(map);
+   marker._element.addEventListener('click', () => {
+    let visitedMarkerColor = '#bbbbbb';
+    let markerElement = marker.getElement();
+    let markerEls =  markerElement
+        .querySelectorAll(`g[fill="${marker._color}"]`);
+    markerEls[0].setAttribute("fill", visitedMarkerColor)
+  });
+}
+
+function setNataliaPopup() {
+  let maxWidth = innerWidth /4;
+  
+ 
+  let popup = new mapboxgl.Popup({
+    offset: 10,
+    maxWidth: (innerWidth /2 + 25) + 'px',
+    anchor: 'center'
+  })
+  
+  //name
+  let dom = document.createElement('div');
+  let name = document.createElement('h2');
+  name.innerHTML = 'NATALIA HERNANDEZ'
+  dom.appendChild(name);
+  
+  //address
+  let address = document.createElement('p');
+  address.innerHTML ='Barelas'
+  dom.appendChild(address);
+  
+  // image
+  let image = document.createElement('img');
+  image.src = 'Natalia_map.jpg';
+  image.width = innerWidth /2;
+  dom.appendChild(image);
+  
+  // audio
+  let sound      = document.createElement('audio');
+  sound.controls = 'controls';
+  sound.src      = 'Natalia_map.mp3';
+  sound.type     = 'audio/mpeg';
+  dom.appendChild(sound);
+  
+  popup.setDOMContent(dom);
+  
+  let marker = new mapboxgl.Marker()
+    .setLngLat([-106.65285410404333, 35.07389905698226])
+    .setPopup(popup) //sets a popup on this marker
+    .addTo(map);
+   marker._element.addEventListener('click', () => {
+    let visitedMarkerColor = '#bbbbbb';
+    let markerElement = marker.getElement();
+    let markerEls =  markerElement
+        .querySelectorAll(`g[fill="${marker._color}"]`);
+    markerEls[0].setAttribute("fill", visitedMarkerColor)
+  });
+}
+
+function setPaulPopup() {
+  let maxWidth = innerWidth /4;
+  
+ 
+  let popup = new mapboxgl.Popup({
+    offset: 10,
+    maxWidth: (innerWidth /2 + 25) + 'px',
+    anchor: 'center'
+  })
+  
+  //name
+  let dom = document.createElement('div');
+  let name = document.createElement('h2');
+  name.innerHTML = 'Paul Cuffee'
+  dom.appendChild(name);
+  
+  //address
+  let address = document.createElement('p');
+  address.innerHTML ='Keshet Dance and Center for the Arts'
+  dom.appendChild(address);
+  
+  // image
+  let image = document.createElement('img');
+  image.src = 'Paul_map.jpg';
+  image.width = innerWidth /2;
+  dom.appendChild(image);
+  
+  // audio
+  let sound      = document.createElement('audio');
+  sound.controls = 'controls';
+  sound.src      = 'Paul_map.mp3';
+  sound.type     = 'audio/mpeg';
+  dom.appendChild(sound);
+  
+  popup.setDOMContent(dom);
+  
+  let marker = new mapboxgl.Marker()
+    .setLngLat([-106.60011001093892, 35.10611870602935])
+    .setPopup(popup) //sets a popup on this marker
+    .addTo(map);
+   marker._element.addEventListener('click', () => {
+    let visitedMarkerColor = '#bbbbbb';
+    let markerElement = marker.getElement();
+    let markerEls =  markerElement
+        .querySelectorAll(`g[fill="${marker._color}"]`);
+    markerEls[0].setAttribute("fill", visitedMarkerColor)
+  });
+}
+
+function setRavenPopup() {
+  let maxWidth = innerWidth /4;
+  
+ 
+  let popup = new mapboxgl.Popup({
+    offset: 10,
+    maxWidth: (innerWidth /2 + 25) + 'px',
+    anchor: 'center'
+  })
+  
+  //name
+  let dom = document.createElement('div');
+  let name = document.createElement('h2');
+  name.innerHTML = 'Raven Bright'
+  dom.appendChild(name);
+  
+  //address
+  let address = document.createElement('p');
+  address.innerHTML ='Tingley Beach'
+  dom.appendChild(address);
+  
+  // image
+  let image = document.createElement('img');
+  image.src = 'Raven_map.jpg';
+  image.width = innerWidth /2;
+  dom.appendChild(image);
+  
+  // audio
+  let sound      = document.createElement('audio');
+  sound.controls = 'controls';
+  sound.src      = 'Raven_map.mp3';
+  sound.type     = 'audio/mpeg';
+  dom.appendChild(sound);
+  
+  popup.setDOMContent(dom);
+  
+  let marker = new mapboxgl.Marker()
+    .setLngLat([-106.67363714266254, 35.085712970428986])
+    .setPopup(popup) //sets a popup on this marker
+    .addTo(map);
+   marker._element.addEventListener('click', () => {
+    let visitedMarkerColor = '#bbbbbb';
+    let markerElement = marker.getElement();
+    let markerEls =  markerElement
+        .querySelectorAll(`g[fill="${marker._color}"]`);
+    markerEls[0].setAttribute("fill", visitedMarkerColor)
+  });
+}
+
+function setSarahPopup() {
+  let maxWidth = innerWidth /4;
+  
+ 
+  let popup = new mapboxgl.Popup({
+    offset: 10,
+    maxWidth: (innerWidth /2 + 25) + 'px',
+    anchor: 'center'
+  })
+  
+  //name
+  let dom = document.createElement('div');
+  let name = document.createElement('h2');
+  name.innerHTML = 'Sarah Hogland-Gurulé'
+  dom.appendChild(name);
+  
+  //address
+  let address = document.createElement('p');
+  address.innerHTML ='Three Sisters Volcanoes'
+  dom.appendChild(address);
+  
+  // image
+  let image = document.createElement('img');
+  image.src = 'Sarah_map.jpg';
+  image.width = innerWidth /2;
+  dom.appendChild(image);
+  
+  // audio
+  let sound      = document.createElement('audio');
+  sound.controls = 'controls';
+  sound.src      = 'Sarah_map.mp3';
+  sound.type     = 'audio/mpeg';
+  dom.appendChild(sound);
+  
+  popup.setDOMContent(dom);
+  
+  let marker = new mapboxgl.Marker()
+    .setLngLat([-106.77313791928525, 35.12854067252455])
     .setPopup(popup) //sets a popup on this marker
     .addTo(map);
    marker._element.addEventListener('click', () => {
