@@ -53,6 +53,10 @@ function init() {
    setPaulPopup();
    setRavenPopup();
    setSarahPopup();
+
+   //ABQ
+   setMaddeiPopup();
+   
 }
 
 function setArthurPopup() {
@@ -1486,6 +1490,55 @@ function setSarahPopup() {
   
   let marker = new mapboxgl.Marker()
     .setLngLat([-106.77313791928525, 35.12854067252455])
+    .setPopup(popup) //sets a popup on this marker
+    .addTo(map);
+   marker._element.addEventListener('click', () => {
+    let visitedMarkerColor = '#bbbbbb';
+    let markerElement = marker.getElement();
+    let markerEls =  markerElement
+        .querySelectorAll(`g[fill="${marker._color}"]`);
+    markerEls[0].setAttribute("fill", visitedMarkerColor)
+  });
+}
+
+unction setMaddeiPopup() {
+  let maxWidth = innerWidth /4;
+  
+ 
+  let popup = new mapboxgl.Popup({
+    offset: 10,
+    maxWidth: (innerWidth /2 + 25) + 'px',
+    anchor: 'center'
+  })
+  
+  //name
+  let dom = document.createElement('div');
+  let name = document.createElement('h2');
+  name.innerHTML = 'MADDEI COLLINS'
+  dom.appendChild(name);
+  
+  //address
+  let address = document.createElement('p');
+  address.innerHTML ='500 Ben Hur Avenue'
+  dom.appendChild(address);
+  
+  // image
+  let image = document.createElement('img');
+  image.src = 'Maddei_map.jpg';
+  image.width = innerWidth /2;
+  dom.appendChild(image);
+  
+  // audio
+  let sound      = document.createElement('audio');
+  sound.controls = 'controls';
+  sound.src      = 'Maddei_map.mp3';
+  sound.type     = 'audio/mpeg';
+  dom.appendChild(sound);
+  
+  popup.setDOMContent(dom);
+  
+  let marker = new mapboxgl.Marker()
+    .setLngLat([-83.89368360349678, 35.979973259078434])
     .setPopup(popup) //sets a popup on this marker
     .addTo(map);
    marker._element.addEventListener('click', () => {
