@@ -1501,7 +1501,7 @@ function setSarahPopup() {
   });
 }
 
-unction setMaddeiPopup() {
+function setMaddeiPopup() {
   let maxWidth = innerWidth /4;
   
  
