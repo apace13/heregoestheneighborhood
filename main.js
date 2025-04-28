@@ -1566,7 +1566,7 @@ function setMaddeiPopup() {
  dom.appendChild(address);
  // image
  let image = document.createElement('img');
- image.src = 'Abby_map.png';
+ image.src = 'Abby_map.PNG';
  image.width = innerWidth /2;
  dom.appendChild(image);
  // audio
@@ -1600,7 +1600,7 @@ function setMaddeiPopup() {
  //name
  let dom = document.createElement('div');
  let name = document.createElement('h2');
- name.innerHTML = 'Lisa Jackson'
+ name.innerHTML = 'LISA JACKSON'
  dom.appendChild(name);
  //address
  let address = document.createElement('p');
@@ -1608,7 +1608,7 @@ function setMaddeiPopup() {
  dom.appendChild(address);
  // image
  let image = document.createElement('img');
- image.src = 'Lisa_map.png';
+ image.src = 'Lisa_map.PNG';
  image.width = innerWidth /2;
  dom.appendChild(image);
  // audio
@@ -1642,7 +1642,7 @@ function setMaddeiPopup() {
  //name
  let dom = document.createElement('div');
  let name = document.createElement('h2');
- name.innerHTML = 'Marvin Drummond'
+ name.innerHTML = 'MARVIN DRUMMOND'
  dom.appendChild(name);
  //address
  let address = document.createElement('p');
@@ -1650,7 +1650,7 @@ function setMaddeiPopup() {
  dom.appendChild(address);
  // image
  let image = document.createElement('img');
- image.src = 'Marvin_map.png';
+ image.src = 'Marvin_map.PNG';
  image.width = innerWidth /2;
  dom.appendChild(image);
  // audio
@@ -1659,7 +1659,9 @@ function setMaddeiPopup() {
  sound.src      = 'Marvin_map.m4a';
  sound.type     = 'audio/mpeg';
  dom.appendChild(sound);
+
  popup.setDOMContent(dom);
+
  let marker = new mapboxgl.Marker()
    .setLngLat([-73.96346432464775, 40.67158041786469])
    .setPopup(popup) //sets a popup on this marker
