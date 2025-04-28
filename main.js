@@ -1661,7 +1661,7 @@ function setMaddeiPopup() {
  dom.appendChild(sound);
  popup.setDOMContent(dom);
  let marker = new mapboxgl.Marker()
-   .setLngLat([-73.96346432464775, 40.67158041786469])
+   .setLngLat([-73.96346432464775, 41.67158041786469])
    .setPopup(popup) //sets a popup on this marker
    .addTo(map);
   marker._element.addEventListener('click', () => {
