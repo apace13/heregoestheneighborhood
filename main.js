@@ -1572,7 +1572,7 @@ function setMaddeiPopup() {
  // audio
  let sound      = document.createElement('audio');
  sound.controls = 'controls';
- sound.src      = 'Maddei_map.mp3';
+ sound.src      = 'Abby_map.m4a';
  sound.type     = 'audio/mpeg';
  dom.appendChild(sound);
  popup.setDOMContent(dom);
@@ -1614,7 +1614,7 @@ function setMaddeiPopup() {
  // audio
  let sound      = document.createElement('audio');
  sound.controls = 'controls';
- sound.src      = 'Maddei_map.mp3';
+ sound.src      = 'Lisa_map.m4a';
  sound.type     = 'audio/mpeg';
  dom.appendChild(sound);
  popup.setDOMContent(dom);
@@ -1656,7 +1656,7 @@ function setMaddeiPopup() {
  // audio
  let sound      = document.createElement('audio');
  sound.controls = 'controls';
- sound.src      = 'Maddei_map.mp3';
+ sound.src      = 'Marvin_map.m4a';
  sound.type     = 'audio/mpeg';
  dom.appendChild(sound);
  popup.setDOMContent(dom);
