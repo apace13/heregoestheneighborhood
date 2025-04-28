@@ -1548,7 +1548,130 @@ function setMaddeiPopup() {
  }
  
  
-
+ function setAbbyPopup() {
+  let maxWidth = innerWidth /4;
+   let popup = new mapboxgl.Popup({
+    offset: 10,
+    maxWidth: (innerWidth /2 + 25) + 'px',
+    anchor: 'center'
+  })
+ //name
+ let dom = document.createElement('div');
+ let name = document.createElement('h2');
+ name.innerHTML = 'ABBY QUITO'
+ dom.appendChild(name);
+ //address
+ let address = document.createElement('p');
+ address.innerHTML ='PS 143 Louis Armstrong'
+ dom.appendChild(address);
+ // image
+ let image = document.createElement('img');
+ image.src = 'Abby_map.png';
+ image.width = innerWidth /2;
+ dom.appendChild(image);
+ // audio
+ let sound      = document.createElement('audio');
+ sound.controls = 'controls';
+ sound.src      = 'Abby_map.m4a';
+ sound.type     = 'audio/mpeg';
+ dom.appendChild(sound);
+ popup.setDOMContent(dom);
+ let marker = new mapboxgl.Marker()
+   .setLngLat([-73.8560520185326, 40.75531664143673])
+   .setPopup(popup) //sets a popup on this marker
+   .addTo(map);
+  marker._element.addEventListener('click', () => {
+   let visitedMarkerColor = '#bbbbbb';
+   let markerElement = marker.getElement();
+   let markerEls =  markerElement
+       .querySelectorAll(`g[fill="${marker._color}"]`);
+   markerEls[0].setAttribute("fill", visitedMarkerColor)
+ });
+ }
+ 
+ 
+ function setLisaPopup() {
+  let maxWidth = innerWidth /4;
+   let popup = new mapboxgl.Popup({
+    offset: 10,
+    maxWidth: (innerWidth /2 + 25) + 'px',
+    anchor: 'center'
+  })
+ //name
+ let dom = document.createElement('div');
+ let name = document.createElement('h2');
+ name.innerHTML = 'Lisa Jackson'
+ dom.appendChild(name);
+ //address
+ let address = document.createElement('p');
+ address.innerHTML ='108-36 Union Hall St'
+ dom.appendChild(address);
+ // image
+ let image = document.createElement('img');
+ image.src = 'Lisa_map.png';
+ image.width = innerWidth /2;
+ dom.appendChild(image);
+ // audio
+ let sound      = document.createElement('audio');
+ sound.controls = 'controls';
+ sound.src      = 'Lisa_map.m4a';
+ sound.type     = 'audio/mpeg';
+ dom.appendChild(sound);
+ popup.setDOMContent(dom);
+ let marker = new mapboxgl.Marker()
+   .setLngLat([ -73.79163921670073, 40.695304729904365])
+   .setPopup(popup) //sets a popup on this marker
+   .addTo(map);
+  marker._element.addEventListener('click', () => {
+   let visitedMarkerColor = '#bbbbbb';
+   let markerElement = marker.getElement();
+   let markerEls =  markerElement
+       .querySelectorAll(`g[fill="${marker._color}"]`);
+   markerEls[0].setAttribute("fill", visitedMarkerColor)
+ });
+ }
+ 
+ 
+ function setMarvinPopup() {
+  let maxWidth = innerWidth /4;
+   let popup = new mapboxgl.Popup({
+    offset: 10,
+    maxWidth: (innerWidth /2 + 25) + 'px',
+    anchor: 'center'
+  })
+ //name
+ let dom = document.createElement('div');
+ let name = document.createElement('h2');
+ name.innerHTML = 'Marvin Drummond'
+ dom.appendChild(name);
+ //address
+ let address = document.createElement('p');
+ address.innerHTML ='Brooklyn Museum'
+ dom.appendChild(address);
+ // image
+ let image = document.createElement('img');
+ image.src = 'Marvin_map.png';
+ image.width = innerWidth /2;
+ dom.appendChild(image);
+ // audio
+ let sound      = document.createElement('audio');
+ sound.controls = 'controls';
+ sound.src      = 'Marvin_map.m4a';
+ sound.type     = 'audio/mpeg';
+ dom.appendChild(sound);
+ popup.setDOMContent(dom);
+ let marker = new mapboxgl.Marker()
+   .setLngLat([-73.96346432464775, 40.67158041786469])
+   .setPopup(popup) //sets a popup on this marker
+   .addTo(map);
+  marker._element.addEventListener('click', () => {
+   let visitedMarkerColor = '#bbbbbb';
+   let markerElement = marker.getElement();
+   let markerEls =  markerElement
+       .querySelectorAll(`g[fill="${marker._color}"]`);
+   markerEls[0].setAttribute("fill", visitedMarkerColor)
+ });
+ }
  
 
 
